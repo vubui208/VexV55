@@ -10,6 +10,8 @@
  * E_CONTROLLER_MASTER is pedantically correct within the PROS styleguide, but
  * not convenient for most student programmers.
  */
+#include "pros/distance.hpp"
+#include "pros/optical.hpp"
 #define PROS_USE_SIMPLE_NAMES
 
 /**
@@ -49,6 +51,8 @@ void autonomous(void);
 void disabled(void);
 void competition_initialize(void);
 void opcontrol(void);
+int get_color(void);
+
 #ifdef __cplusplus
 }
 extern pros::Motor High_mid;
@@ -59,6 +63,9 @@ extern pros::Motor Eatball;
 extern pros::adi::Pneumatics Parking;
 extern pros::adi::Pneumatics Mouth;
 extern pros::adi::Pneumatics DeScore;
+extern pros::Distance Dist;
+extern pros::Distance Dist2;
+extern pros::Optical optical;
 #endif
 
 #ifdef __cplusplus
